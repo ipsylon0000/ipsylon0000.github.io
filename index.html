@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zyrix | Indie Game Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Google Fonts: Gabarito & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,7 +176,7 @@
   <!-- Home -->
   <section id="home" class="min-h-screen flex items-center justify-center animated-bg reveal">
     <div class="text-center px-6">
-      <h1 class="text-7xl md:text-9xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Zyrix</h1>
+      <h1 class="text-7xl md:text-9xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Zyrix Caylo</h1>
       <p class="mt-4 text-xl md:text-2xl text-slate-300 font-light max-w-2xl mx-auto">Indie Game Developer · Designer · Researcher</p>
       <div class="mt-10">
         <a href="#projects" class="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold transition-all inline-block shadow-lg shadow-indigo-500/20">View My Work</a>
@@ -223,7 +224,7 @@
         <div class="flex justify-center gap-6">
           <a href="https://www.linkedin.com/in/zyrix-caylo/" class="icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/ipsylon0000/" class="icon-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" class="icon-btn" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+          <!-- <a href="#" class="icon-btn" aria-label="itch.io"><i class="fab fa-itch-io"></i></a> -->
           <a href="assets/cv.pdf" class="icon-btn" aria-label="CV"><i class="fas fa-file-pdf"></i></a>
         </div>
       </div>
@@ -262,37 +263,41 @@
     <div class="relative group">
       <div id="carousel-viewport" class="overflow-visible">
         <div id="carousel" class="carousel-track">
-          <!-- Slide Data -->
-          <div class="carousel-item" onclick="openModal('Procedural Roguelike', 'A deep dive into dungeon generation.')">
-            <div class="carousel-item-inner">
-               <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80" class="w-full h-[600px] object-cover" alt="Project 1" />
-               <div class="slide-overlay">
-                   <h3 class="text-4xl font-bold mb-2 text-white">Procedural Roguelike</h3>
-                   <p class="text-slate-100 text-lg">Endless adventures in ever-shifting corridors.</p>
-               </div>
+        <!-- Slide 1 -->
+          <div class="carousel-item" data-title="Mexican Stickman" data-project="mexicanstickman">
+            <div class="carousel-item-inner" onclick="openProject(this.parentElement.dataset.project, this.parentElement.dataset.title)">
+              <img src="https://ipsylon0000.neocities.org/portfolio/projects/mexican-stickman-thumbnail.png" class="w-full h-[600px] object-cover" alt="Procedural Roguelike" />
+              <div class="slide-overlay">
+                <h3 class="text-4xl font-bold mb-2 text-white">Mexican Stickman</h3>
+                <p class="text-slate-100 text-lg">A college collaboration project where I helped make the music and trailer</p>
+              </div>
             </div>
           </div>
-          <div class="carousel-item" onclick="openModal('Open World Prototype', 'Exploring massive scale environment rendering.')">
-            <div class="carousel-item-inner">
-               <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" class="w-full h-[600px] object-cover" alt="Project 2" />
-               <div class="slide-overlay">
-                   <h3 class="text-4xl font-bold mb-2 text-white">Open World Prototype</h3>
-                   <p class="text-slate-100 text-lg">A technical demo focusing on dynamic weather and large-scale AI.</p>
-               </div>
+
+        <!-- Slide 2 -->
+          <div class="carousel-item" data-title="The Black Castle" data-project="blackcastle">
+            <div class="carousel-item-inner" onclick="openProject(this.parentElement.dataset.project, this.parentElement.dataset.title)">
+              <img src="assets/black castle.jpeg" class="w-full h-[600px] object-cover" alt="Open World Prototype" />
+              <div class="slide-overlay">
+                <h3 class="text-4xl font-bold mb-2 text-white">The Black Castle</h3>
+                <p class="text-slate-100 text-lg">A real-time timeline based roguelike situated in a dark fantasy world. Coming soon.</p>
+              </div>
             </div>
           </div>
-          <div class="carousel-item" onclick="openModal('Neon Tundra', 'Cyberpunk aesthetic meets survival mechanics.')">
-            <div class="carousel-item-inner">
-               <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" class="w-full h-[600px] object-cover" alt="Project 3" />
-               <div class="slide-overlay">
-                   <h3 class="text-4xl font-bold mb-2 text-white">Neon Tundra</h3>
-                   <p class="text-slate-100 text-lg">Survival mechanics in a frozen high-tech future.</p>
-               </div>
+
+         <!-- Slide 3 -->
+          <div class="carousel-item" data-title="Miscellaneous Work" data-project="miscellaneous">
+            <div class="carousel-item-inner" onclick="openProject(this.parentElement.dataset.project, this.parentElement.dataset.title)">
+              <img src="assets/japanese house.png" class="w-full h-[600px] object-cover" alt="Neon Tundra" />
+              <div class="slide-overlay">
+                <h3 class="text-4xl font-bold mb-2 text-white">Miscellaneous Work</h3>
+                <p class="text-slate-100 text-lg">Check out my other work, which is mostly work that I have done in college.</p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
-
       <button onclick="prevSlide()" class="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-full z-20 flex items-center justify-center transition-all border border-white/10 group">
         <i class="fas fa-arrow-left text-xl group-hover:-translate-x-1 transition-transform"></i>
       </button>
@@ -306,15 +311,17 @@
 
   <!-- Modal -->
   <div id="modal" class="fixed inset-0 bg-black/95 flex items-center justify-center z-[100] p-6 backdrop-blur-sm">
-    <div id="modal-content" class="bg-slate-900 border border-slate-800 p-10 md:p-16 rounded-[3rem] max-w-3xl w-full relative shadow-2xl">
+    <div id="modal-content" class="bg-slate-900 border border-slate-800 p-10 md:p-16 rounded-[3rem] max-w-3xl w-full relative shadow-2xl max-h-[85vh] overflow-y-auto">
       <button onclick="closeModal()" class="absolute top-8 right-8 text-slate-500 hover:text-white transition-colors">
         <i class="fas fa-times text-3xl"></i>
       </button>
       <h3 id="modalTitle" class="text-5xl font-bold mb-6 text-indigo-400"></h3>
-      <p id="modalDesc" class="text-slate-300 text-xl leading-relaxed mb-10 font-light"></p>
+      <!-- Editable modal body: put ANY HTML here (images, videos, embeds, etc.) -->
+      <div id="modalBody" class="text-slate-300 text-xl leading-relaxed mb-10 font-light space-y-6">
+        <!-- This content is replaced dynamically -->
+      </div>
       <div class="flex flex-wrap gap-4">
           <button onclick="closeModal()" class="px-10 py-4 bg-slate-800 hover:bg-slate-700 rounded-2xl font-semibold transition-all">Close</button>
-          <button class="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold transition-all shadow-lg shadow-indigo-600/20">Launch Case Study</button>
       </div>
     </div>
   </div>
@@ -390,17 +397,36 @@
       navDots.forEach(d => d.classList.toggle('active', d.dataset.section === current));
     });
 
-    window.openModal = function(title, desc) {
+    const projectContent = {
+      mexicanstickman: `
+        <p>A Mexican platformer game that I worked alongside three other people as part of a group project assignment. I mainly worked on the music and the trailer.</p>
+        <iframe width="620" height="415" src="https://www.youtube.com/embed/cv00IAWlLMc"></iframe>
+        <iframe width="620" height="415" src="https://www.youtube.com/embed/15rgLcHRpww"></iframe>
+      `,
+      blackcastle: `
+        <p>Part of my Final Major Project work. Currently in development.</p>
+      `,
+      miscellaneous: `
+        <h3 class="text-4xl font-bold mb-6">3D Art</h3>
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" class="rounded-2xl w-full" />
+      `
+    };
+
+    window.openProject = function(key, title) {
       document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalBody').innerHTML = projectContent[key] || '<p>Content coming soon.</p>';
       document.getElementById('modal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
+
     window.closeModal = function() {
       document.getElementById('modal').classList.remove('active');
       document.body.style.overflow = 'auto';
     }
+
     document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+
+('click', function(e) { if (e.target === this) closeModal(); });
   </script>
 </body>
 </html>
